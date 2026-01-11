@@ -9,3 +9,13 @@ rm(iristeste)
 
 # Verificando se o objeto realmente foi removido
 exists("iristeste")
+
+#Carregando do meu disco 
+load(file = "iristeste.RData")
+
+#ver se realmente carregamos
+iristeste
+
+#Visualização em tabela
+View(iristeste)
+
