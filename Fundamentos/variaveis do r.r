@@ -1,13 +1,11 @@
-#Clonando um objeto
+# Clonando o dataset iris para um novo objeto
+iristeste <- iris
 
-iristeste = iris
+# Salvando o objeto em disco para uso posterior
+save(iristeste, file = "iristeste.RData")
 
-#salvando como um DataFrame
-save(iristeste, file= "iristeste.Rdata")
+# Removendo o objeto do ambiente para simular um novo carregamento
+rm(iristeste)
 
-
-#Agora para remover, usamos
-rm(iristeste) #-> rm para remover e dentro o que queremos remover
-
-#ai a gente testa para ver ser realmente removeu
-iristeste # se realmente foi removido, vai aparecer algo do tipo "Error: object 'iristeste' not found"
+# Verificando se o objeto realmente foi removido
+exists("iristeste")
